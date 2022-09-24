@@ -2667,3 +2667,11 @@ class Solution:
             stack.append(ch)
         return "".join(stack)
 ```
+#### Finding the Longest word in Python
+```python
+# list with words
+>>> words_list = ["Python", "is", "very", "important", "language"]
+# In max we will provide the listofwords and key=len as arguments 
+>>> long_word = max(words_list, key=len)
+>>> print(long_word)
+```
