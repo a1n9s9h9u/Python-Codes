@@ -2677,3 +2677,34 @@ class Solution:
 >>> long_word = max(words_list, key=len)
 >>> print(long_word)
 ```
+#### Climbing Stairs using Python
+
+In the climbing stairs problem, we need to count all the possible combinations to reach the top of a staircase. As it has a constraint, we can only climb one step or two steps at a time, so we have a choice of stepping on or skipping a step.
+```python
+def climbStairs(num):
+    a = 1
+    b = 1
+    n = num - 1
+    for i in range(n):
+        c = a
+        a = a + b
+        b = c
+```
+#### Square Root using Python
+```python
+def mySqrt(x):
+    left = 1
+    right = x
+    mid = 0
+    while (left <= right):
+        mid = (left + right) // 2
+        if mid * mid == x:
+            return mid
+        elif mid * mid > x:
+            right = mid - 1
+        else:
+            left = mid + 1
+            sqrt
+```
+#### Group Elements of Same Indices using Python
+
