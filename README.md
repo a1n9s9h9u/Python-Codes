@@ -2708,3 +2708,83 @@ def mySqrt(x):
 ```
 #### Group Elements of Same Indices using Python
 
+To group elements of the same index, you will initially have two or more lists inside a list like [[a, b], [c, d]]. To group the elements of these lists, you need to create two new lists where you will store the elements of both the lists at index 0 [a, c] and index 1 [b, d].
+```python
+inputLists = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
+outputLists = []
+index = 0
+
+for i in range(len(inputLists[0])):
+    outputLists.append([])
+    for j in range(len(inputLists)):
+        outputLists[index].append(inputLists[j][ index])
+    index = index + 1
+a, b, c = outputLists[0], outputLists[1], outputLists[2]
+print(a, b, c)
+```
+#### Calculating Execution Time of a Python Program
+```python
+from time import time
+start = time()
+# Your Python program
+end = time()
+execution_time = end - start
+```
+#### Python Program to Count Most Frequent Words in a File
+
+Here you will be given a file, and you will be asked to find the most frequent words in that file along with the number of times they are present.
+```python
+words = []
+with open("demofile.txt", "r") as f:
+    for line in f:
+        words.extend(line.split())
+
+from collections import Counter
+counts = Counter(words)
+top5 = counts.most_common(5)
+print(top5)
+```
+#### Python Program to Count Capital Letters in a File
+
+You will be given a text file, and you will be asked to read the file without using a Python library and print the number of capital or lowercase letters in the text file.
+```python
+with open("text.txt") as file:
+    count = 0
+    text = file.read()
+    for i in text:
+        if i.isupper():
+            count += 1
+    print(count)
+```
+#### Python Program to Count Small Letters in a File
+```python
+with open("text.txt") as file:
+    count = 0
+    text = file.read()
+    for i in text:
+        if i.islower():
+            count += 1
+    print(count)
+```
+#### Index of the Maximum Value in a Python List
+```python
+def maximum(x):
+    maximum_index = 0
+    current_index = 1
+    while current_index < len(x):
+        if x[current_index] > x[maximum_index]:
+            maximum_index = current_index
+        current_index = current_index + 1
+    return maximum_index
+```
+#### Index of Minimum Value in a Python List
+```python
+def minimum(x):
+    minimum_index = 0
+    current_index = 1
+    while current_index < len(x):
+        if x[current_index] < x[minimum_index]:
+            minimum_index = current_index
+        current_index = current_index + 1
+    return minimum_index
+```
